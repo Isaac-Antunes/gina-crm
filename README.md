@@ -80,7 +80,7 @@ Tudo que é publicado no GitHub Pages pode ser lido por quem visita o site. Por 
 
 ## Histórico
 
-A primeira versão, um estudo de caso com demo interativa, está preservada na tag [`v1-case-study`](https://github.com/isaacantunesfacha-dev/gina-crm/releases/tag/v1-case-study).
+A primeira versão, um estudo de caso com demo interativa, está preservada na branch [`v1-case-study`](https://github.com/isaacantunesfacha-dev/gina-crm/tree/v1-case-study).
 
 ## Contato
 
