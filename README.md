@@ -7,7 +7,8 @@
 <p align="center">
   <a href="https://isaacantunesfacha-dev.github.io/gina-crm/"><b>Ver o site</b></a> ·
   <a href="https://isaacantunesfacha-dev.github.io/gina-crm/en/">English</a> ·
-  <a href="https://isaacantunesfacha-dev.github.io/gina-crm/case/">Estudo de marca</a>
+  <a href="behance/">Estudo de marca</a> ·
+  <a href="https://www.behance.net/gallery/256578105/Lifecycle-CRM-told-by-Gina">Behance</a>
 </p>
 
 # Gina · Consultoria de CRM
@@ -97,6 +98,7 @@ A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em
 | `/en/` | Consultoria, em inglês |
 | `/case/` | Estudo de marca da Gina: identidade, modos, kit de interface e jornada |
 | `/pt/`, `/demo/` | Endereços da v1, redirecionam para as páginas novas |
+| `behance/` | As 15 peças do estudo de marca, na ordem do Behance |
 | `docs/` | Imagens deste README |
 
 As páginas são desenhadas no Claude Design e exportadas como HTML e CSS estáticos, sem JavaScript, sem rastreamento e sem cookies. As fontes (Bagel Fat One, Onest e JetBrains Mono) vêm do Google Fonts.
