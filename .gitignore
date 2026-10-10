@@ -141,3 +141,14 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Nunca publicar: segredos, código do serviço e dados da máquina
+.DS_Store
+*.pem
+*.key
+*.p12
+secrets/
+private/
+ai-studio/
+server.ts
+.claude/
