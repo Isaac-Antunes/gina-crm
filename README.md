@@ -90,6 +90,22 @@ A seção **Gina Intell** do site mostra, passo a passo, como a Gina trata o ped
 
 A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em vídeo nas conversas comerciais.
 
+## A Gina na Salesforce
+
+"Dentro do CRM que você já usa" também vale para a Salesforce. Desde outubro de 2026, a Gina roda como agente do Agentforce: o dono do negócio pergunta no painel da Salesforce quem precisa de atenção hoje, e a Gina responde com os dados da própria org, sem exportar planilha nem trocar de tela.
+
+- **As regras rodam na Salesforce**, com as permissões de quem pergunta. Se o usuário não pode ler o campo de consentimento, a Gina trata o cliente como sem consentimento e não sugere contato.
+- **A única coisa que a Gina grava é uma tarefa** para o dono aprovar. Ela não envia mensagem a cliente.
+- **Instala como pacote** em outras orgs Salesforce.
+
+| | |
+|---|---|
+| **29 de 29** | decisões iguais entre a versão web e a Salesforce, na mesma base de clientes |
+| **99%** | de cobertura de testes no pacote |
+| **0** | mensagens enviadas sem aprovação do dono |
+
+O código dessa integração não fica neste repositório, pela regra explicada em [O que este repositório contém](#o-que-este-repositório-contém-e-o-que-não-contém).
+
 ## Estrutura
 
 | Caminho | Conteúdo |
@@ -100,6 +116,7 @@ A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em
 | `/pt/`, `/demo/` | Endereços da v1, redirecionam para as páginas novas |
 | `behance/` | As 15 peças do estudo de marca, na ordem do Behance |
 | `docs/` | Imagens deste README |
+| `SECURITY.md` | Como relatar um problema de segurança |
 
 As páginas são desenhadas no Claude Design e exportadas como HTML e CSS estáticos, sem JavaScript, sem rastreamento e sem cookies. As fontes (Bagel Fat One, Onest e JetBrains Mono) vêm do Google Fonts.
 
@@ -128,7 +145,7 @@ LinkedIn: https://www.linkedin.com/in/isaacnandes/
 
 ## In English
 
-Gina is the CRM method behind my consulting work for small businesses. It compares each customer with their own buying rhythm (1.5× late, 3.0× dormant, top third treated by a person), never sends without consent or the owner's approval, and runs inside the CRM the business already uses. This repository holds the public site only: no decision engine, AI prompts, keys or customer data.
+Gina is the CRM method behind my consulting work for small businesses. It compares each customer with their own buying rhythm (1.5× late, 3.0× dormant, top third treated by a person), never sends without consent or the owner's approval, and runs inside the CRM the business already uses. On Salesforce, Gina runs as an Agentforce agent installed as a package: 29 of 29 decisions match the web version, 99% test coverage, and the only thing it writes is a task for the owner to approve. This repository holds the public site only: no decision engine, AI prompts, keys or customer data.
 
 ---
 
