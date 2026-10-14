@@ -37,7 +37,7 @@ A Gina é o método de CRM que uso na minha consultoria para pequenos negócios:
 Cada camada resolve uma dor diferente, e cada uma tem uma prova ao lado.
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["Dados do CRM<br/>clientes e pedidos"] --> B["Regras da Gina<br/>ritmo, VIP, consentimento"]
     B --> C{"Decisão"}
     C -->|"em ritmo ou descanso"| D["Silêncio"]
