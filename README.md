@@ -96,7 +96,7 @@ A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em
 
 - **As regras rodam na Salesforce**, com as permissões de quem pergunta. Se o usuário não pode ler o campo de consentimento, a Gina trata o cliente como sem consentimento e não sugere contato.
 - **A única coisa que a Gina grava é uma tarefa** para o dono aprovar. Ela não envia mensagem a cliente.
-- **Instala como pacote** em outras orgs Salesforce.
+- **Existe como pacote gerenciado** para instalar em outras orgs Salesforce (versão 0.1.0.1, ainda não publicada no AppExchange).
 
 | | |
 |---|---|
@@ -104,7 +104,34 @@ A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em
 | **99%** | de cobertura de testes no pacote |
 | **0** | mensagens enviadas sem aprovação do dono |
 
-O código dessa integração não fica neste repositório, pela regra explicada em [O que este repositório contém](#o-que-este-repositório-contém-e-o-que-não-contém).
+O código dessa integração não fica neste repositório, pela regra explicada em [O que este repositório contém](#o-que-este-repositório-contém-e-o-que-não-contém). O que fica aqui é o resumo do que foi verificado.
+
+### Como isso foi verificado
+
+Os números acima vêm de **17 testes automatizados** que rodam dentro da Salesforce, em três grupos:
+
+| Grupo | Testes | O que prova |
+|---|---|---|
+| **Regras** | 7 | Cada regra da tabela acima, isolada: ritmo pela mediana, VIP pelo terço superior, dormência, consentimento e dados inválidos. |
+| **Ações no Agentforce** | 5 | Com registros de verdade: a tarefa para o dono é criada uma só vez, não é criada quando a decisão é silêncio, e não sai nada quando o usuário não pode ler o consentimento. |
+| **Jornadas** | 5 | O mesmo cliente visto em datas diferentes, do primeiro pedido à dormência. |
+
+As cinco jornadas:
+
+1. **Cliente novo:** boas-vindas, depois em ritmo (silêncio), depois lembrete, depois descanso.
+2. **VIP:** em ritmo, depois atrasado (contato pessoal, prioridade alta), depois dormente. O descanso vale também para VIP.
+3. **Consentimento revogado no meio do caminho:** a Gina para de sugerir contato, mesmo para VIP.
+4. **Sem consentimento desde o início:** nem as boas-vindas viram tarefa.
+5. **Três contatos ignorados:** a Gina deixa de insistir e entra em descanso.
+
+Em cada passo, os testes conferem também que **nenhuma tarefa nasce quando a decisão é silêncio**.
+
+**Limites, ditos com franqueza:**
+- A versão do pacote ainda **não passou pela revisão de segurança da Salesforce** nem por auditoria independente.
+- Os testes usam dezenas de registros; **não foi medido** o desempenho com milhares.
+- A instalação da versão gerenciada numa org limpa ainda será conferida antes de publicá-la.
+
+Quer ver a Gina funcionando? A demonstração completa é feita em vídeo, nas conversas comerciais.
 
 ## Estrutura
 
@@ -145,7 +172,7 @@ LinkedIn: https://www.linkedin.com/in/isaacnandes/
 
 ## In English
 
-Gina is the CRM method behind my consulting work for small businesses. It compares each customer with their own buying rhythm (1.5× late, 3.0× dormant, top third treated by a person), never sends without consent or the owner's approval, and runs inside the CRM the business already uses. On Salesforce, Gina runs as an Agentforce agent installed as a package: 29 of 29 decisions match the web version, 99% test coverage, and the only thing it writes is a task for the owner to approve. This repository holds the public site only: no decision engine, AI prompts, keys or customer data.
+Gina is the CRM method behind my consulting work for small businesses. It compares each customer with their own buying rhythm (1.5× late, 3.0× dormant, top third treated by a person), never sends without consent or the owner's approval, and runs inside the CRM the business already uses. On Salesforce, Gina runs as an Agentforce agent available as a managed package (not yet on AppExchange): 29 of 29 decisions match the web version, 99% test coverage across 17 automated tests (rules, actions and five customer journeys), and the only thing it writes is a task for the owner to approve. It has not yet been through Salesforce's security review. This repository holds the public site only: no decision engine, AI prompts, keys or customer data.
 
 ---
 
