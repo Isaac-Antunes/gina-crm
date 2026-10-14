@@ -23,6 +23,41 @@ A Gina é o método de CRM que uso na minha consultoria para pequenos negócios:
 
 ---
 
+## Em 30 segundos
+
+| | |
+|---|---|
+| **Para quem** | Pequenos negócios que estão instalando um CRM, ou que têm um e não sabem o que fazer com ele. |
+| **O que entrega** | Consultoria, um design exclusivo e a Gina, o agente que mostra quem precisa de atenção hoje. |
+| **O que a Gina nunca faz** | Mandar mensagem sem a aprovação do dono, ou falar com quem não autorizou. |
+| **Como saber se funciona** | Grupo de controle e regras testadas (veja [Como isso foi verificado](#como-isso-foi-verificado)). |
+
+## Arquitetura de valor
+
+Cada camada resolve uma dor diferente, e cada uma tem uma prova ao lado.
+
+```mermaid
+flowchart LR
+    A["Dados do CRM<br/>clientes e pedidos"] --> B["Regras da Gina<br/>ritmo, VIP, consentimento"]
+    B --> C{"Decisão"}
+    C -->|"em ritmo ou descanso"| D["Silêncio"]
+    C -->|"atraso ou cliente novo"| E["Lembrete sugerido"]
+    C -->|"VIP atrasado"| F["Contato pessoal"]
+    C -->|"sem consentimento"| G["Bloqueio"]
+    E --> H["Tarefa para o dono aprovar"]
+    F --> H
+    H --> I["O dono decide e envia"]
+    I --> J["Medição com grupo de controle"]
+```
+
+| Camada | O que você ganha | Prova |
+|---|---|---|
+| **1. Método** | Cada cliente é comparado com o próprio ritmo, não com uma média da loja. | [Como a Gina decide](#como-a-gina-decide) |
+| **2. Confiança** | Consentimento manda e o dono aprova: menos risco de spam e de denúncia. | Jornadas 3 e 4 em [Como isso foi verificado](#como-isso-foi-verificado) |
+| **3. Dentro do seu CRM** | Nada de planilha nem de ferramenta nova: a Gina trabalha onde os dados já estão. | 29 de 29 decisões iguais na Salesforce |
+| **4. Serviço** | Alguém que configura, ajusta e explica, com identidade visual própria. | [Como trabalho](#como-trabalho) |
+| **5. Resultado** | Números com denominador, comparados com quem não recebeu a mensagem. | [Como medimos](#como-medimos) |
+
 ## O problema
 
 Pequeno negócio costuma gastar energia buscando cliente novo enquanto perde, em silêncio, quem já comprou. O CRM existe, mas:
@@ -37,10 +72,10 @@ Cada cliente é comparado com o próprio ritmo, não com uma média da loja.
 
 | Situação | Regra | O que acontece |
 |---|---|---|
-| **Novo** | uma compra há menos de 30 dias | régua de estímulo ao segundo pedido |
-| **No ritmo** | menos de 1,5× o intervalo habitual | nenhuma mensagem |
-| **Atraso** | 1,5× ou mais | um lembrete leve, no canal e no horário certos |
-| **Dormente** | 3,0× ou mais, ou três contatos seguidos sem resposta | quarentena de 90 dias, sem disparos automáticos |
+| **Novo** | uma única data de compra, há até 30 dias | régua de estímulo ao segundo pedido |
+| **No ritmo** | até 1,5× o intervalo habitual | nenhuma mensagem |
+| **Atraso** | mais de 1,5× e até 3,0× | um lembrete leve, no canal e no horário certos |
+| **Dormente** | mais de 3,0×, ou três contatos seguidos sem resposta | quarentena de 90 dias, sem disparos automáticos |
 | **VIP** | terço superior em frequência e em gasto | contato pessoal, nunca automático |
 
 O intervalo habitual é a mediana dos intervalos entre compras, para que uma compra fora da curva não distorça o ritmo do cliente. Um cliente que comprou nos dias 0, 10, 20 e 120 tem ritmo de 10 dias; pela média, seriam 40.
@@ -91,6 +126,8 @@ A seção **Gina Intell** do site mostra, passo a passo, como a Gina trata o ped
 A demonstração completa, com a Gina trabalhando sobre dados, é apresentada em vídeo nas conversas comerciais.
 
 ## A Gina na Salesforce
+
+> **Em resumo:** o dono pergunta no painel da Salesforce "quem precisa de atenção hoje?". A Gina responde com a decisão e o motivo de cada cliente. Se fizer sentido, ela cria uma tarefa. Quem decide e envia é o dono.
 
 "Dentro do CRM que você já usa" também vale para a Salesforce. Desde outubro de 2026, a Gina roda como agente do Agentforce: o dono do negócio pergunta no painel da Salesforce quem precisa de atenção hoje, e a Gina responde com os dados da própria org, sem exportar planilha nem trocar de tela.
 
