@@ -182,7 +182,7 @@ Quer ver a Gina funcionando? A demonstração completa é feita em vídeo, nas c
 | `docs/` | Imagens deste README |
 | `SECURITY.md` | Como relatar um problema de segurança |
 
-As páginas são desenhadas no Claude Design e exportadas como HTML e CSS estáticos, sem JavaScript, sem rastreamento e sem cookies. As fontes (Bagel Fat One, Onest e JetBrains Mono) vêm do Google Fonts.
+As páginas são exportadas como HTML e CSS estáticos, sem JavaScript, sem rastreamento e sem cookies. As fontes (Bagel Fat One, Onest e JetBrains Mono) vêm do Google Fonts.
 
 ## O que este repositório contém, e o que não contém
 
