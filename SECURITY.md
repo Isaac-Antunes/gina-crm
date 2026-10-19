@@ -1,19 +1,16 @@
-# Segurança
+# Security Policy
 
-Este repositório publica apenas o site da consultoria: páginas estáticas em HTML e CSS, sem JavaScript, sem formulários, sem cookies e sem dados de clientes.
+This repository (`gina-crm`) hosts only the static HTML and CSS consultancy showcase and brand study—with **zero JavaScript, zero forms, zero cookies, and zero customer data**.
 
-## Como relatar um problema
+For the executable CRM policy engine, adversarial prompt-injection defenses, and Salesforce Agentforce security architecture, see [`Isaac-Antunes/gina-training-lab`](https://github.com/Isaac-Antunes/gina-training-lab/blob/main/docs/seguranca.md).
 
-Use o relato privado do GitHub: aba **Security** → **Report a vulnerability**. O relato fica visível só para o mantenedor.
+## Reporting a Vulnerability
 
-Não abra issue pública para problemas de segurança.
+Please report security issues privately via GitHub: **Security → Report a vulnerability**. Reports submitted through this channel are visible only to the repository maintainer.
 
-Exemplos do que vale relatar:
+Do not open public GitHub issues for security reports.
 
-- uma página que carrega conteúdo de um endereço inesperado;
-- um link que leva a um site falso ou comprometido;
-- qualquer dado pessoal ou credencial publicado por engano.
-
-## In English
-
-This repository only hosts a static HTML and CSS site. To report a security issue, use **Security → Report a vulnerability** on GitHub. Please do not open a public issue.
+Examples of in-scope reports for this repository:
+- A static page loading resources from an unexpected or untrusted origin;
+- A broken or hijacked external link;
+- Any accidental inclusion of personal identifiers or credentials.
