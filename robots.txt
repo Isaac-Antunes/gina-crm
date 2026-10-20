@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://isaacantunesfacha-dev.github.io/gina-crm/sitemap.xml
+Sitemap: https://isaac-antunes.github.io/gina-crm/sitemap.xml

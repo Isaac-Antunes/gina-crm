@@ -152,3 +152,7 @@ private/
 ai-studio/
 server.ts
 .claude/
+
+# Local agent skills installed for this project
+.agents/
+skills-lock.json

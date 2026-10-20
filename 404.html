@@ -5,22 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Página não encontrada · Gina</title>
-<link rel="icon" href="/gina-crm/assets/img/gina-rosto.webp">
+<link rel="icon" href="assets/img/gina-rosto.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Onest:wght@400;600;700;800&display=swap">
 <style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#1E6B2E;color:#f5f3ed;font:16px/1.5 system-ui,sans-serif;text-align:center;padding:24px;box-sizing:border-box}
-  img{width:180px;height:auto}
-  h1{font-size:28px;margin:16px 0 8px}
-  p{margin:0 0 24px;opacity:.85}
-  a{display:inline-block;margin:4px;padding:12px 20px;border-radius:99px;background:#7FC453;color:#061f16;font-weight:600;text-decoration:none}
-  a+a{background:transparent;color:#f5f3ed;border:1px solid rgba(245,243,237,.5)}
+  :root { --ink:#08251a; --green:#14502a; --lime:#a8e36d; --cream:#f7f4ec; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; background:radial-gradient(120% 90% at 50% 0%, #ddf2ff 0%, #eaf8f1 46%, var(--cream) 100%); color:var(--ink); font-family:"Onest", ui-sans-serif, system-ui, sans-serif; text-align:center; }
+  main { max-width:560px; }
+  img { width:180px; height:auto; margin:0 auto 8px; filter:drop-shadow(0 20px 26px rgba(8,37,26,.16)); }
+  h1 { font-size:clamp(34px,6vw,52px); letter-spacing:-.04em; line-height:1; margin:0 0 14px; }
+  p { color:#3f5c4c; font-size:17px; line-height:1.55; margin:0 0 26px; }
+  a { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 24px; border-radius:99px; background:var(--green); color:#fff; font-weight:700; text-decoration:none; }
+  a:focus-visible { outline:3px solid var(--green); outline-offset:3px; }
+  a:hover { background:#06301f; }
 </style>
 </head>
 <body>
 <main>
-  <img src="/gina-crm/assets/img/gina-acena.webp" alt="Gina acenando">
-  <h1>A Gina procurou em todo canto.</h1>
-  <p>Esta página não existe ou mudou de lugar.<br><span lang="en">This page doesn't exist, or it moved.</span></p>
-  <a href="/gina-crm/">Voltar para a página</a><a href="/gina-crm/en/" lang="en">English</a>
+  <img src="assets/img/gina-acena.webp" alt="Gina, mascote da consultoria, acenando">
+  <h1>Essa página saiu do ritmo.</h1>
+  <p>O endereço não existe mais, mas o caminho de volta está aqui — e a fila de quem pede atenção continua na home.</p>
+  <a href="./">Voltar para a Gina</a>
 </main>
 </body>
 </html>
