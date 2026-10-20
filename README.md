@@ -1,6 +1,6 @@
 # Gina · Lifecycle CRM Methodology & Brand System
 
-[![Gina Intell](https://img.shields.io/badge/Gina%20Intell-Methodology%20%26%20Brand-78b833?labelColor=262626&style=flat-square)](https://isaacantunesfacha-dev.github.io/gina-crm/en/)
+[![Gina Intell](https://img.shields.io/badge/Gina%20Intell-Methodology%20%26%20Brand-78b833?labelColor=262626&style=flat-square)](https://isaac-antunes.github.io/gina-crm/en/)
 [![Evaluation Lab](https://img.shields.io/badge/Engineering%20Lab-gina--training--lab-d77757?labelColor=262626&style=flat-square)](https://github.com/Isaac-Antunes/gina-training-lab)
 [![Salesforce Agentforce](https://img.shields.io/badge/Salesforce%20Parity-29%2F29%20%C2%B7%2099%25%20Apex-00a1e0?labelColor=262626&style=flat-square)](#gina-inside-salesforce-agentforce)
 [![Architecture](https://img.shields.io/badge/site-zero--JS%20static%20HTML%2FCSS-6e6e6e?labelColor=262626&style=flat-square)](index.html)
@@ -17,7 +17,7 @@ Gina is a deterministic lifecycle CRM methodology, visual identity system, and h
 > [!NOTE]
 > **Two companion repositories:** This repository (`gina-crm`) hosts the zero-JavaScript static consultancy site, the [15-plate Behance brand study](behance/), and the executive methodology overview. For the full TypeScript & Salesforce Apex policy engines, the 47-case adversarial prompt-injection evaluation suite, and the `Gina Intell` 2GP managed package source, see [**`Isaac-Antunes/gina-training-lab`**](https://github.com/Isaac-Antunes/gina-training-lab).
 
-- **Live Links:** [Live Site (EN)](https://isaacantunesfacha-dev.github.io/gina-crm/en/) · [Live Site (PT)](https://isaacantunesfacha-dev.github.io/gina-crm/) · [Brand Case Study (`/case/`)](https://isaacantunesfacha-dev.github.io/gina-crm/case/) · [Behance Gallery](https://www.behance.net/gallery/256578105/Lifecycle-CRM-told-by-Gina) · [Engineering & Evaluation Lab](https://github.com/Isaac-Antunes/gina-training-lab)
+- **Live Links:** [Live Site (EN)](https://isaac-antunes.github.io/gina-crm/en/) · [Live Site (PT)](https://isaac-antunes.github.io/gina-crm/) · [Brand Case Study (`/case/`)](https://isaac-antunes.github.io/gina-crm/case/) · [Behance Gallery](https://www.behance.net/gallery/256578105/Lifecycle-CRM-told-by-Gina) · [Engineering & Evaluation Lab](https://github.com/Isaac-Antunes/gina-training-lab)
 - **Sections:** [In 30 Seconds](#in-30-seconds) · [Value Architecture](#value-architecture) · [Deterministic Decision Rules](#deterministic-decision-rules) · [What Gina Refuses to Do](#what-gina-refuses-to-do) · [Causal Measurement & Holdouts](#causal-measurement--holdouts) · [Gina Inside Salesforce Agentforce](#gina-inside-salesforce-agentforce) · [Repository Structure](#repository-structure)
 
 ---

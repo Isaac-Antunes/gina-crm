@@ -1,626 +1,356 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Gina · Consultoria de CRM</title>
-<meta name="description" content="Consultoria de CRM para pequenos negócios: a Gina lê o ritmo de cada cliente, avisa quem está se afastando e prepara a mensagem certa, dentro do CRM que você já usa.">
-<link rel="canonical" href="https://isaacantunesfacha-dev.github.io/gina-crm/">
-<link rel="alternate" hreflang="pt-BR" href="https://isaacantunesfacha-dev.github.io/gina-crm/">
-<link rel="alternate" hreflang="en" href="https://isaacantunesfacha-dev.github.io/gina-crm/en/">
-<link rel="alternate" hreflang="x-default" href="https://isaacantunesfacha-dev.github.io/gina-crm/">
+<title>Gina · CRM que faz o cliente voltar</title>
+<meta name="description" content="Consultoria de CRM para pet shops e negócios de recompra: a Gina lê o ritmo de cada cliente, organiza a fila de quem pede atenção e prepara a próxima conversa. Nada é enviado sem a aprovação do dono.">
+<link rel="canonical" href="https://isaac-antunes.github.io/gina-crm/">
+<link rel="alternate" hreflang="pt-BR" href="https://isaac-antunes.github.io/gina-crm/">
+<link rel="alternate" hreflang="en" href="https://isaac-antunes.github.io/gina-crm/en/">
+<link rel="alternate" hreflang="x-default" href="https://isaac-antunes.github.io/gina-crm/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gina">
-<meta property="og:title" content="Gina · Consultoria de CRM">
-<meta property="og:description" content="Consultoria de CRM para pequenos negócios: a Gina lê o ritmo de cada cliente, avisa quem está se afastando e prepara a mensagem certa, dentro do CRM que você já usa.">
-<meta property="og:url" content="https://isaacantunesfacha-dev.github.io/gina-crm/">
+<meta property="og:title" content="Gina · CRM que faz o cliente voltar">
+<meta property="og:description" content="A Gina lê o ritmo de compra de cada cliente e organiza a fila de quem pede atenção. O dono revisa e decide. Nenhuma mensagem sai sozinha.">
+<meta property="og:url" content="https://isaac-antunes.github.io/gina-crm/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:image" content="https://isaacantunesfacha-dev.github.io/gina-crm/assets/img/og.jpg">
+<meta property="og:image" content="https://isaac-antunes.github.io/gina-crm/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Gina, mascote de CRM de Isaac Antunes: o rosto verde da consultoria">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Isaac Antunes">
 <link rel="icon" href="assets/img/gina-rosto.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=JetBrains+Mono:wght@400;500;700&family=Onest:wght@400;500;600;700;800&display=swap"><meta name="author" content="Isaac Antunes"><meta name="copyright" content="© 2026 Isaac Antunes. Personagem Gina e ilustrações: todos os direitos reservados."><style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* greek */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* greek */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* math */
-
-/* symbols */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* math */
-
-/* symbols */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* math */
-
-/* symbols */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* math */
-
-/* symbols */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-</style><style>
-*,*::before,*::after{box-sizing:border-box;margin:0}
-body{background:#eef6e6;color:#061f16;font-family:'Onest',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-p,h1,h2,h3{text-wrap:pretty}
-img{display:block}
-a{color:#1E6B2E;text-decoration:none}
-a:hover{color:#061f16}
-:focus-visible{outline:2px solid #1E6B2E;outline-offset:3px}
-details>summary{list-style:none}
-details>summary::-webkit-details-marker{display:none}
-@keyframes ginaFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-</style><style>.intell{display:flex;flex-direction:column;gap:10px}
-.intell summary{list-style:none;cursor:pointer;width:100%}
-.intell summary::-webkit-details-marker{display:none}
-.intell details[open]>summary{background:#1E6B2E!important;color:#f5f3ed!important}
-.intell details[open]>summary>span:first-child{background:#7FC453!important;color:#061f16!important}
-.intell summary>span[aria-hidden]{display:none}
-.intell details>div{margin-top:10px}
-.intell summary:focus-visible{outline:3px solid #7FC453;outline-offset:2px}</style></head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site/site.css">
+</head>
 <body>
-<div id="dc-root"><div class="sc-host" data-sc-name="index"><main lang="pt-BR" style="max-width: 1280px; margin-inline: auto; padding: 16px; display: flex; flex-direction: column; gap: 16px;">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <nav aria-label="Main" style="padding: 10px 10px 10px 18px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.4) 0px 10px 30px -20px; display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap;">
-    <a href="#top" style="display: flex; align-items: center; gap: 8px; color: rgb(6, 31, 22);"><img decoding="async" src="assets/img/gina-rosto.webp" alt="" width="28" height="27" style="width: 28px; height: auto;"><span style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-size: 22px; line-height: 1; color: rgb(30, 107, 46);">Gina</span></a>
-    <div style="order: 3; flex: 1 1 420px; min-width: 0px; display: flex; gap: 2px; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
-      <a href="#services" style="padding: 10px 12px; font-size: 15px; font-weight: 600;">Serviços</a>
-      <a href="#method" style="padding: 10px 12px; font-size: 15px; font-weight: 600;">Método</a>
-      <a href="#reasoning" style="padding: 10px 12px; font-size: 15px; font-weight: 600;">Raciocínio</a>
-      <a href="#faq" style="padding: 10px 12px; font-size: 15px; font-weight: 600;">FAQ</a>
-    </div>
-    <div style="order: 2; display: flex; align-items: center; gap: 6px;">
-      <div role="group" aria-label="Language" style="display: flex; padding: 4px; border-radius: 99px; background: rgb(238, 246, 230);">
-        <a href="./" style="padding: 8px 11px; border: 0px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font: 600 13px / 1 Onest, system-ui; cursor: pointer;" hreflang="pt-BR" aria-current="page">PT</a>
-        <a href="en/" style="padding: 8px 11px; border: 0px; border-radius: 99px; background: transparent; color: rgb(6, 31, 22); font: 600 13px / 1 Onest, system-ui; cursor: pointer;" hreflang="en">EN</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Gina, início">
+      <img src="assets/img/gina-rosto.webp" alt="" width="34" height="33">
+      <span>Gina</span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#problema">O problema</a>
+      <a href="#metodo">Método</a>
+      <a href="#petshop">Para pet shops</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="https://wa.me/5511991351002?text=Ol%C3%A1%2C%20quero%20entender%20o%20diagn%C3%B3stico%20da%20Gina%20para%20o%20meu%20pet%20shop.">Agendar diagnóstico</a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <h1 id="hero-title">Seu pet shop.<br>Clientes que <em>voltam</em>.</h1>
+          <p class="hero-sub">A Gina lê o ritmo de compra de cada cliente, mostra quem está se afastando e organiza a próxima conversa — dentro do CRM que você já usa. Nada sai sem a sua aprovação.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/5511991351002?text=Ol%C3%A1%2C%20quero%20entender%20o%20diagn%C3%B3stico%20da%20Gina%20para%20o%20meu%20pet%20shop.">Agendar diagnóstico
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button button-light" href="#metodo">Ver como funciona</a>
+          </div>
+          <p class="hero-note">Sem disparo em massa. Sem mensagem sem consentimento.</p>
+        </div>
+
+        <span class="hero-chip one" aria-hidden="true"><span class="dot"></span>Fila de hoje pronta</span>
+        <span class="hero-chip two" aria-hidden="true"><span class="dot"></span>Consentimento primeiro</span>
+
+        <img class="hero-scene" src="assets/pet-shop-scene.svg" alt="Ilustração de um pet shop de bairro com cachorro, gato, árvores e céu azul" width="1600" height="760">
+
+        <div class="hero-phone" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+              <div class="phone-greet">
+                <img src="assets/img/gina-rosto.webp" alt="">
+                <div><small>Bom dia, Marina</small><strong>Fila de hoje</strong></div>
+              </div>
+              <div class="phone-list">
+                <div class="phone-row">
+                  <span class="avatar">RA</span>
+                  <div><strong>Roberto Alves</strong><small>VIP · 1,9x do ritmo</small></div>
+                  <span class="tag">Alta</span>
+                </div>
+                <div class="phone-row normal">
+                  <span class="avatar">AL</span>
+                  <div><strong>Ana Lima</strong><small>Atrasada · 1,6x</small></div>
+                  <span class="tag">Média</span>
+                </div>
+                <div class="phone-row normal">
+                  <span class="avatar">JR</span>
+                  <div><strong>Julia Rocha</strong><small>Primeira compra</small></div>
+                  <span class="tag">Novo</span>
+                </div>
+                <div class="phone-row blocked">
+                  <span class="avatar">CN</span>
+                  <div><strong>Carlos Nunes</strong><small>Sem opt-in</small></div>
+                  <span class="tag">Bloqueado</span>
+                </div>
+              </div>
+              <div class="phone-cta">Revisar fila</div>
+              <div class="phone-foot">Nada é enviado ao cliente</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="https://wa.me/5511991351002" target="_blank" rel="noopener" class="scp0" style="padding: 11px 16px; border-radius: 99px; background: rgb(30, 107, 46); color: rgb(245, 243, 237); font-size: 14px; font-weight: 600; white-space: nowrap;">Conversar</a>
     </div>
-  </nav>
+  </section>
 
-  <section id="top" style="position: relative; border-radius: 24px; overflow: hidden; background: radial-gradient(55% 75% at 78% 90%, rgb(159, 220, 110) 0%, rgb(95, 184, 74) 35%, rgb(30, 107, 46) 75%, rgb(20, 80, 42) 100%); padding: clamp(32px, 5vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; align-items: center; min-height: clamp(520px, 50vw, 660px);">
-    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 22px; color: rgb(245, 243, 237);">
-      <span style="align-self: flex-start; padding: 8px 14px; border-radius: 99px; background: rgba(245, 243, 237, 0.14); box-shadow: rgba(245, 243, 237, 0.3) 0px 0px 0px 1px inset; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Consultoria de CRM · Isaac Antunes</span>
-      <h1 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(48px, 6.4vw, 88px); line-height: 0.92; letter-spacing: -0.01em;">Seu próximo cliente pode ser alguém que você já conquistou.</h1>
-      <p style="max-width: 44ch; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55;">Uma régua de relacionamento sob medida para o seu negócio, dentro do CRM que você já usa. Pode ser uma loja, uma clínica, uma escola ou uma marca digital. A Gina lê o ritmo de cada cliente, avisa quem está se afastando e escreve a mensagem certa para cada canal.</p>
-      <p style="max-width: 52ch; font-size: 15px; line-height: 1.55; color: rgb(212, 239, 190);">Isaac Antunes é analista sênior de CRM e Lifecycle, com passagens por mídia, terceiro setor e eventos. A Gina trabalha ao lado dele e aprende a cada sessão: guarda o tom, as regras e os resultados do seu negócio, e cada entrega parte de onde a anterior parou.</p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="mailto:iantunessp@gmail.com" class="scp1" style="padding: 16px 26px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 16px; font-weight: 700; box-shadow: rgba(6, 31, 22, 0.6) 0px 12px 24px -12px;">Agendar diagnóstico</a>
-        <a href="#services" class="scp2" style="padding: 16px 26px; border-radius: 99px; box-shadow: rgb(245, 243, 237) 0px 0px 0px 1.5px inset; color: rgb(245, 243, 237); font-size: 16px; font-weight: 600;">Ver serviços</a>
-      </div>
-    </div>
-    <div style="position: relative; height: clamp(340px, 40vw, 560px);">
-      <div style="position: absolute; left: 50%; bottom: -14%; height: 112%; transform: translateX(-50%);">
-        <img fetchpriority="high" decoding="async" src="assets/img/gina-acena.webp" alt="Gina waving" style="height: 100%; width: auto; animation: 5s ease-in-out 0s infinite normal none running ginaFloat; filter: drop-shadow(rgba(6, 31, 22, 0.45) 0px 30px 40px);">
+  <section class="trust" aria-label="Como o método é verificado">
+    <div class="wrap trust-inner">
+      <span class="trust-label">Método testado antes de chegar ao seu negócio:</span>
+      <div class="trust-list">
+        <span>29 perfis de paridade</span>
+        <span>47 casos de avaliação</span>
+        <span>0 mensagens automáticas</span>
       </div>
     </div>
   </section>
 
-  <section style="padding: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-    <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(30, 107, 46);">Como funciona</span>
-    <h2 style="max-width: 22ch; font-size: clamp(30px, 3.8vw, 50px); font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; color: rgb(30, 107, 46); text-wrap: balance;">Menos anúncio para trazer gente nova. Mais cuidado com quem já veio.</h2>
-    <div style="margin-top: 32px; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; text-align: left;">
-      
-        <div style="padding: 28px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="width: 44px; height: 44px; border-radius: 14px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700; font-variant-numeric: tabular-nums;">01</span>
-          <h3 style="font-size: 21px; font-weight: 600; line-height: 1.2;">Lê o ritmo</h3>
-          <p style="font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Cada cliente tem um intervalo próprio de compra. A Gina aprende esse ritmo a partir do seu histórico de compras.</p>
-        </div>
-      
-        <div style="padding: 28px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="width: 44px; height: 44px; border-radius: 14px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700; font-variant-numeric: tabular-nums;">02</span>
-          <h3 style="font-size: 21px; font-weight: 600; line-height: 1.2;">Avisa quem se afasta</h3>
-          <p style="font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Quando alguém passa do próprio ritmo, você recebe um alerta com o nome, o contexto e a próxima ação.</p>
-        </div>
-      
-        <div style="padding: 28px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="width: 44px; height: 44px; border-radius: 14px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700; font-variant-numeric: tabular-nums;">03</span>
-          <h3 style="font-size: 21px; font-weight: 600; line-height: 1.2;">Escreve a mensagem</h3>
-          <p style="font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">E-mail, push, SMS, WhatsApp ou stories, no horário certo e com a voz da sua marca. Nada sai sem a sua aprovação.</p>
-        </div>
-      
-    </div>
-  </section>
-
-  <section id="method" style="padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: start;">
-    <div style="display: flex; flex-direction: column; gap: 16px;">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(127, 196, 83);">Método</span>
-      <h2 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(40px, 5vw, 68px); line-height: 0.92;">Regras claras, auditáveis.</h2>
-      <p style="max-width: 40ch; font-size: 17px; line-height: 1.6; color: rgb(212, 239, 190);">Sem caixa-preta. Cada cliente entra em um estágio do ciclo de vida a partir de regras simples, que você entende e pode ajustar.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px;">
-      
-        <div style="padding: 22px; border-radius: 20px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 18px; font-weight: 700;">Novo</span><span style="padding: 4px 10px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 13px; font-weight: 700; white-space: nowrap;">1ª compra</span></div>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(212, 239, 190);">Uma compra há menos de 30 dias. Entra na régua de estímulo ao segundo pedido.</p>
-        </div>
-      
-        <div style="padding: 22px; border-radius: 20px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 18px; font-weight: 700;">Atrasado</span><span style="padding: 4px 10px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 13px; font-weight: 700; white-space: nowrap;">1,5×</span></div>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(212, 239, 190);">Já passou 1,5 vez do seu intervalo habitual. Recebe um lembrete sutil, no ritmo dele.</p>
-        </div>
-      
-        <div style="padding: 22px; border-radius: 20px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 18px; font-weight: 700;">Dormente</span><span style="padding: 4px 10px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 13px; font-weight: 700; white-space: nowrap;">3,0×</span></div>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(212, 239, 190);">Já passou 3 vezes do seu intervalo. Entra em quarentena de 90 dias, sem disparos automáticos.</p>
-        </div>
-      
-        <div style="padding: 22px; border-radius: 20px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 18px; font-weight: 700;">VIP</span><span style="padding: 4px 10px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 13px; font-weight: 700; white-space: nowrap;">Topo</span></div>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(212, 239, 190);">Terço superior em frequência e em gasto. Só recebe abordagem pessoal, nunca automática.</p>
-        </div>
-      
-    </div>
-    <div style="grid-column: 1 / -1; padding: 18px 22px; border-radius: 20px; border: 1px dashed rgba(127, 196, 83, 0.45); display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline;">
-      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(127, 196, 83); white-space: nowrap;">Ordem de decisão</span>
-      <p style="flex: 1 1 420px; font-size: 15px; line-height: 1.55; color: rgb(212, 239, 190);">Quando duas regras se aplicam, vale a primeira desta lista. Consentimento vem antes de tudo, inclusive do VIP. Depois vêm Dormente, VIP, Atrasado e Novo. E nenhuma mensagem sai sem a sua aprovação.</p>
-    </div>
-  </section>
-
-  <section id="reasoning" style="padding: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 32px;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(30, 107, 46);">Gina Intell · linha de raciocínio</span>
-      <h2 style="max-width: 22ch; font-size: clamp(30px, 3.8vw, 50px); font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; color: rgb(30, 107, 46); text-wrap: balance;">Como a Gina pensa antes de escrever.</h2>
-      <p style="max-width: 56ch; font-size: 17px; line-height: 1.55; color: rgb(30, 107, 46);">Cada pedido passa pela mesma sequência de etapas, e cada etapa tem um critério de saída. Veja um exemplo do pedido de uma loja de cosméticos.</p>
-    </div>
-    <div style="padding: 20px 24px; border-radius: 20px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap;">
-      <span style="flex: 0 0 auto; padding: 6px 12px; border-radius: 99px; background: rgb(238, 246, 230); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(30, 107, 46);">Pedido da loja</span>
-      <p style="flex: 1 1 320px; font-size: 18px; line-height: 1.5; font-style: italic; color: rgb(6, 31, 22);">“Muitas clientes pararam de vir depois do verão. Quero chamar elas de volta sem parecer desesperada.”</p>
-    </div>
-    <div class="intell"><details name="gina-intell" open=""><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">01</span>
-            <span style="flex: 1 1 0%;">Briefing</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">01 · Briefing</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Recebo o pedido como ele chegou. Não reescrevo a intenção da loja: o objetivo é reativar, e o limite é não soar insistente.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Objetivo</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Trazer de volta clientes que sumiram</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Restrição</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Sem tom de pressão ou urgência</dd>
-            </div>
-          
-        </dl>
-      </div></details><details name="gina-intell"><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">02</span>
-            <span style="flex: 1 1 0%;">Interpretação</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">02 · Interpretação</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Separo o que foi dito, o que está implícito e o que falta. O que falta eu pergunto, em vez de supor.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Informado</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Reativação, tom cuidadoso</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Implícito</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Clientes recorrentes de produtos que acabam</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Ausente</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Oferta, canal preferido, prazo</dd>
-            </div>
-          
-        </dl>
-      </div></details><details name="gina-intell"><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">03</span>
-            <span style="flex: 1 1 0%;">Leitura do ciclo</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">03 · Leitura do ciclo</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Aplico as regras de ciclo de vida. Consentimento vem primeiro: sem opt-in, ninguém entra. Quem passou 1,5× do próprio ritmo recebe um lembrete. Quem passou 3,0× fica de fora, e os clientes VIP vão para contato pessoal.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Atrasado 1,5×</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Entra na campanha</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Dormente 3,0×</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Quarentena de 90 dias</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">VIP</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Lista para o lojista ligar</dd>
-            </div>
-          
-        </dl>
-      </div></details><details name="gina-intell"><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">04</span>
-            <span style="flex: 1 1 0%;">Estratégia</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">04 · Estratégia</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Um único caminho de conversão. Primeiro, um lembrete de cuidado, sem desconto. Sem resposta, a Gina não insiste: o próximo passo é decisão do lojista.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Tipo</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Lembrete pessoal</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Canal</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">WhatsApp, no horário habitual de cada cliente</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">CTA único</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Separar o produto no balcão</dd>
-            </div>
-          
-        </dl>
-      </div></details><details name="gina-intell"><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">05</span>
-            <span style="flex: 1 1 0%;">Copy</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">05 · Copy</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Escrevo como a loja fala. A mensagem cumpre exatamente o que o primeiro contato promete, sem exagero.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Mensagem</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Oi, Marina! Faz um tempinho. Separamos seu kit com carinho no balcão hoje.</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Variável</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Nome e produto favorito de cada cliente</dd>
-            </div>
-          
-        </dl>
-      </div></details><details name="gina-intell"><summary style="width: 100%; padding: 14px 16px; border: 0px; border-radius: 16px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; font: 600 16px / 1.2 Onest, system-ui; box-shadow: rgba(6, 31, 22, 0.35) 0px 6px 18px -14px;">
-            <span style="flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: rgb(238, 246, 230); color: rgb(6, 31, 22); display: grid; place-items: center; font: 700 13px / 1 &quot;JetBrains Mono&quot;, monospace;">06</span>
-            <span style="flex: 1 1 0%;">Validação</span>
-            <span aria-hidden="true" style="width: 0px; height: 3px; border-radius: 99px; background: rgb(127, 196, 83); transition: width 0.3s;"></span>
-          </summary><div style="flex: 999 1 420px; min-width: 0px; padding: clamp(24px, 3vw, 36px); border-radius: 24px; background: rgb(6, 31, 22); color: rgb(245, 243, 237); display: flex; flex-direction: column; gap: 20px; box-shadow: rgba(6, 31, 22, 0.6) 0px 30px 50px -30px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img loading="lazy" decoding="async" src="assets/img/gina-rosto.webp" alt="" style="flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; background: rgb(245, 243, 237); padding: 5px; object-fit: contain;">
-          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font: 700 12px / 1 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">06 · Validação</span><span style="font-size: 13px; color: rgb(212, 239, 190);">Gina está pensando</span></div>
-        </div>
-        <p style="font-size: clamp(19px, 1.8vw, 24px); line-height: 1.45; font-weight: 500;">Antes de entregar, confiro tudo e declaro o que ainda depende de uma pessoa. Nada sai sem aprovação.</p>
-        <dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;">
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Conferido</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Opt-out, variáveis, contraste e textos alternativos</dd>
-            </div>
-          
-            <div style="padding: 14px 16px; border-radius: 14px; background: rgba(245, 243, 237, 0.06); box-shadow: rgba(245, 243, 237, 0.12) 0px 0px 0px 1px inset; display: flex; flex-direction: column; gap: 6px;">
-              <dt style="font: 700 11px / 1.2 &quot;JetBrains Mono&quot;, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(127, 196, 83);">Pendente</dt>
-              <dd style="margin: 0px; font-size: 15px; line-height: 1.45; color: rgb(245, 243, 237);">Aprovação do lojista e estoque do kit</dd>
-            </div>
-          
-        </dl>
-      </div></details></div>
-  </section>
-
-  <section id="services" style="padding: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 48px); border-radius: 24px; background: rgb(245, 243, 237); display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-    <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(30, 107, 46);">Serviços</span>
-    <h2 style="max-width: 20ch; font-size: clamp(30px, 3.8vw, 50px); font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; color: rgb(30, 107, 46); text-wrap: balance;">Três formas de começar.</h2>
-    <div style="margin-top: 32px; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; text-align: left; align-items: stretch;">
-      
-        <article style="padding: 30px; border-radius: 24px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.45) 0px 14px 34px -22px; display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">1 semana</span></div>
-          <h3 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(28px, 7.5vw, 38px); line-height: 0.95; overflow-wrap: anywhere;">Diagnóstico</h3>
-          <p style="font-size: 16px; line-height: 1.5;">Para entender onde o seu negócio está perdendo clientes.</p>
-          <ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Leitura da base de clientes e do histórico de compras</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Segmentação por ciclo de vida e RFV</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Relatório com as prioridades dos próximos 90 dias</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Reunião de apresentação</span></li>
-          </ul>
-          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgb(233, 239, 226); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <span style="font-size: 20px; font-weight: 700;">Sob consulta</span>
-            <a href="mailto:iantunessp@gmail.com" style="padding: 12px 18px; border-radius: 99px; background: rgb(30, 107, 46); color: rgb(245, 243, 237); font-size: 15px; font-weight: 700;">Quero este</a>
+  <section class="section" id="problema" aria-labelledby="problema-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="problema-title">O cliente não sumiu.<br>Ele só saiu do ritmo.</h2>
+        <p>Quem compra ração todo mês e quem marca banho a cada três semanas têm ciclos diferentes. A maioria das ferramentas trata todo mundo igual.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round"/><circle cx="19" cy="18" r="2.4"/></svg>
+          <div>
+            <h3>A lista não fala</h3>
+            <p>Você tem 1.200 contatos e nenhuma pista de quem está atrasado, quem é VIP ou quem pediu para não receber.</p>
           </div>
         </article>
-      
-        <article style="padding: 30px; border-radius: 24px; background: rgb(30, 107, 46); color: rgb(245, 243, 237); box-shadow: rgba(6, 31, 22, 0.45) 0px 14px 34px -22px; display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">3 a 4 semanas</span><span style="padding: 4px 10px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 12px; font-weight: 700;">Recomendado</span></div>
-          <h3 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(28px, 7.5vw, 38px); line-height: 0.95; overflow-wrap: anywhere;">Implantação</h3>
-          <p style="font-size: 16px; line-height: 1.5;">Para pôr a régua de relacionamento em funcionamento.</p>
-          <ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Tudo do Diagnóstico</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Regras de ciclo de vida configuradas no seu CRM</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Mensagens para os cinco canais, no tom da sua marca</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Gina adaptada com o nome da sua loja</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Treinamento da equipe</span></li>
-          </ul>
-          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(245, 243, 237, 0.2); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <span style="font-size: 20px; font-weight: 700;">Sob consulta</span>
-            <a href="mailto:iantunessp@gmail.com" style="padding: 12px 18px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 15px; font-weight: 700;">Quero este</a>
+        <article class="problem-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 10v4l10 5V5L4 10Z" stroke-linejoin="round"/><path d="M14 8c2 1 3 2.4 3 4s-1 3-3 4" stroke-linecap="round"/><path d="M19 6c2 1.5 3 3.5 3 6s-1 4.5-3 6" stroke-linecap="round" opacity=".5"/></svg>
+          <div>
+            <h3>O disparo queima</h3>
+            <p>Mensagem para a base inteira irrita quem está em dia, derruba a margem e ensina o cliente a só comprar com desconto.</p>
           </div>
         </article>
-      
-        <article style="padding: 30px; border-radius: 24px; background: rgb(255, 255, 255); color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.45) 0px 14px 34px -22px; display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">Mensal</span></div>
-          <h3 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(28px, 7.5vw, 38px); line-height: 0.95; overflow-wrap: anywhere;">Acompanhamento</h3>
-          <p style="font-size: 16px; line-height: 1.5;">Para manter a régua afinada e testar novas ideias.</p>
-          <ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Revisão mensal dos resultados</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Novas campanhas e datas sazonais</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Testes A/B de assunto, horário e canal</span></li><li style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; width: 8px; height: 8px; border-radius: 99px; background: rgb(127, 196, 83);"></span><span>Relatório mensal em linguagem simples</span></li>
-          </ul>
-          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgb(233, 239, 226); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <span style="font-size: 20px; font-weight: 700;">Sob consulta</span>
-            <a href="mailto:iantunessp@gmail.com" style="padding: 12px 18px; border-radius: 99px; background: rgb(30, 107, 46); color: rgb(245, 243, 237); font-size: 15px; font-weight: 700;">Quero este</a>
+        <article class="problem-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h3>O dono não tem tempo</h3>
+            <p>Sistema, planilha, WhatsApp e caderno. A decisão de quem contatar fica sempre para depois do balcão.</p>
           </div>
         </article>
-      
+      </div>
     </div>
   </section>
 
-  <section style="padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px); border-radius: 24px; background: rgb(127, 196, 83); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: clamp(24px, 4vw, 48px); align-items: center;">
-    <div style="display: flex; flex-direction: column; gap: 14px;">
-      <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(6, 31, 22);">Freelance</span>
-      <h2 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(40px, 5vw, 68px); line-height: 0.92; color: rgb(6, 31, 22);">Precisa de uma peça só?</h2>
-      <p style="max-width: 40ch; font-size: 17px; line-height: 1.55; color: rgb(6, 31, 22);">Projetos avulsos para marcas, agências e times de marketing, com o mesmo método.</p>
-    </div>
-    <ul style="list-style: none; padding: 0px; display: flex; flex-wrap: wrap; gap: 10px;">
-      <li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">E-mail marketing em HTML</li><li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">Régua de relacionamento</li><li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">Copy para CRM</li><li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">Auditoria de acessibilidade em e-mail</li><li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">Mascote e identidade</li><li style="padding: 14px 18px; border-radius: 16px; background: rgb(245, 243, 237); font-size: 16px; font-weight: 600; color: rgb(6, 31, 22); box-shadow: rgba(6, 31, 22, 0.5) 0px 8px 18px -12px;">Segmentação RFV</li>
-    </ul>
-  </section>
-
-  <section style="padding: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-    <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(30, 107, 46);">Processo</span>
-    <h2 style="max-width: 20ch; font-size: clamp(30px, 3.8vw, 50px); font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; color: rgb(30, 107, 46); text-wrap: balance;">Do briefing à primeira mensagem enviada.</h2>
-    <ol style="margin-top: 32px; width: 100%; list-style: none; padding: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; text-align: left;">
-      
-        <li style="padding: 24px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-size: 40px; line-height: 1; color: rgb(127, 196, 83);">1</span>
-          <h3 style="font-size: 19px; font-weight: 600;">Briefing</h3>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(30, 107, 46);">Uma conversa sobre o negócio, os clientes e as ferramentas que você já usa.</p>
-        </li>
-      
-        <li style="padding: 24px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-size: 40px; line-height: 1; color: rgb(127, 196, 83);">2</span>
-          <h3 style="font-size: 19px; font-weight: 600;">Leitura estratégica</h3>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(30, 107, 46);">Marca, objetivo, segmento, canal e chamada de cada ação.</p>
-        </li>
-      
-        <li style="padding: 24px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-size: 40px; line-height: 1; color: rgb(127, 196, 83);">3</span>
-          <h3 style="font-size: 19px; font-weight: 600;">Régua e mensagens</h3>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(30, 107, 46);">Regras de ciclo de vida e textos para cada canal, aprovados por você.</p>
-        </li>
-      
-        <li style="padding: 24px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.35) 0px 10px 30px -20px; display: flex; flex-direction: column; gap: 10px;">
-          <span style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-size: 40px; line-height: 1; color: rgb(127, 196, 83);">4</span>
-          <h3 style="font-size: 19px; font-weight: 600;">Entrega e ajuste</h3>
-          <p style="font-size: 15px; line-height: 1.5; color: rgb(30, 107, 46);">Configuração no seu CRM, testes de compatibilidade e acessibilidade.</p>
-        </li>
-      
-    </ol>
-  </section>
-
-  <section id="faq" style="padding: clamp(40px, 5vw, 72px) clamp(20px, 4vw, 56px); border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(6, 31, 22, 0.06) 0px 0px 0px 1px inset; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: start;">
-    <h2 style="font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(40px, 5vw, 68px); line-height: 0.92; color: rgb(30, 107, 46);">Perguntas frequentes</h2>
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-      
-        <details style="border-radius: 16px; background: rgb(238, 246, 230);">
-          <summary style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; cursor: pointer;">Preciso trocar de CRM?<span aria-hidden="true" style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 99px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700;">+</span></summary>
-          <p style="padding: 0px 20px 20px; font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Não. Tudo é feito na ferramenta de CRM ou de e-mail que você já usa.</p>
-        </details>
-      
-        <details style="border-radius: 16px; background: rgb(238, 246, 230);">
-          <summary style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; cursor: pointer;">Serve para o meu tipo de negócio?<span aria-hidden="true" style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 99px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700;">+</span></summary>
-          <p style="padding: 0px 20px 20px; font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Serve para qualquer negócio com clientes que voltam: varejo, serviços, saúde, educação, assinaturas, mídia e marcas digitais. Cada nicho tem seu ritmo, e a Gina aprende o seu.</p>
-        </details>
-      
-        <details style="border-radius: 16px; background: rgb(238, 246, 230);">
-          <summary style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; cursor: pointer;">As mensagens saem sozinhas?<span aria-hidden="true" style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 99px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700;">+</span></summary>
-          <p style="padding: 0px 20px 20px; font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Não. Cada envio passa pela sua aprovação antes de sair, e clientes VIP só recebem contato pessoal.</p>
-        </details>
-      
-        <details style="border-radius: 16px; background: rgb(238, 246, 230);">
-          <summary style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; cursor: pointer;">Você atende clientes fora do Brasil?<span aria-hidden="true" style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 99px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700;">+</span></summary>
-          <p style="padding: 0px 20px 20px; font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Sim. O atendimento é remoto, em português ou inglês.</p>
-        </details>
-      
-        <details style="border-radius: 16px; background: rgb(238, 246, 230);">
-          <summary style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; cursor: pointer;">Quanto custa?<span aria-hidden="true" style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 99px; background: rgb(127, 196, 83); display: grid; place-items: center; font-weight: 700;">+</span></summary>
-          <p style="padding: 0px 20px 20px; font-size: 16px; line-height: 1.55; color: rgb(30, 107, 46);">Depende do tamanho da base e dos canais. Depois do briefing, você recebe uma proposta com valor fechado.</p>
-        </details>
-      
+  <section class="section section-tint" id="metodo" aria-labelledby="metodo-title">
+    <div class="wrap">
+      <span id="reasoning" aria-hidden="true"></span>
+      <div class="band">
+        <div>
+          <h2 id="metodo-title">Um ritmo por cliente. Uma fila por dia.</h2>
+          <p class="lede">A Gina transforma histórico de compras em uma decisão simples e explicável — sem caixa-preta e sem mensagem automática.</p>
+          <a class="button button-lime" href="#servicos">Ver os serviços
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-num">01</span>
+            <div><h3>Lê o ritmo</h3><p>A mediana entre compras, não a média. Um intervalo de 3 dias e um de 30 contam histórias diferentes — e a Gina sabe disso.</p></div>
+          </article>
+          <article class="step-card">
+            <span class="step-num">02</span>
+            <div><h3>Monta a fila</h3><p>Quem passou do próprio ritmo, quem é VIP, quem está em descanso e quem está bloqueado por consentimento.</p></div>
+          </article>
+          <article class="step-card">
+            <span class="step-num">03</span>
+            <div><h3>Você aprova</h3><p>A Gina não envia nada. Ela prepara a tarefa e explica o porquê; o dono decide e conversa.</p></div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section style="position: relative; border-radius: 24px; overflow: hidden; background: radial-gradient(60% 80% at 50% 110%, rgb(159, 220, 110), rgb(30, 107, 46) 75%); padding: clamp(48px, 6vw, 88px) clamp(20px, 4vw, 48px) clamp(200px, 22vw, 280px); display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; color: rgb(245, 243, 237);">
-    <h2 style="max-width: 16ch; font-family: &quot;Bagel Fat One&quot;, system-ui; font-weight: 400; font-size: clamp(44px, 6vw, 84px); line-height: 0.92; text-wrap: balance;">Vamos trazer seus clientes de volta?</h2>
-    <p style="max-width: 42ch; font-size: 18px; line-height: 1.55;">Conte em poucas linhas como é o seu negócio. Isaac responde com os próximos passos.</p>
-    <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-      <a href="mailto:iantunessp@gmail.com" class="scp1" style="padding: 16px 26px; border-radius: 99px; background: rgb(127, 196, 83); color: rgb(6, 31, 22); font-size: 16px; font-weight: 700;">iantunessp@gmail.com</a>
-      <a href="https://www.linkedin.com/in/isaacnandes/" target="_blank" rel="noopener" class="scp2" style="padding: 16px 26px; border-radius: 99px; box-shadow: rgb(245, 243, 237) 0px 0px 0px 1.5px inset; color: rgb(245, 243, 237); font-size: 16px; font-weight: 600;">LinkedIn</a>
-      <a href="https://wa.me/5511991351002" target="_blank" rel="noopener" class="scp2" style="padding: 16px 26px; border-radius: 99px; box-shadow: rgb(245, 243, 237) 0px 0px 0px 1.5px inset; color: rgb(245, 243, 237); font-size: 16px; font-weight: 600;">WhatsApp</a>
+  <section class="section" id="petshop" aria-labelledby="petshop-title">
+    <div class="wrap split">
+      <div class="split-copy">
+        <h2 id="petshop-title">Ração todo mês. Banho a cada três semanas. A Gina lê os dois.</h2>
+        <p>Pet shop não é só venda de produto: é rotina, cuidado e recorrência. Quando o cliente muda o ritmo, a Gina percebe antes de ele desaparecer.</p>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Separa compra de ração, banho e tosa para não misturar ritmos diferentes.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Marca o cliente que voltou de um intervalo longo como atrasado, sem inventar desconto.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bloqueia quem revogou o contato e pede opt-in de quem ainda não autorizou.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Entrega uma fila curta para o dono revisar em 20 minutos por semana.</span></li>
+        </ul>
+        <a class="button button-primary" href="https://wa.me/5511991351002?text=Ol%C3%A1%2C%20quero%20o%20diagn%C3%B3stico%20para%20o%20meu%20pet%20shop." style="margin-top:26px">Quero o diagnóstico para pet shop</a>
+      </div>
+      <div class="rhythm-card">
+        <h3>Dois ritmos, uma fila</h3>
+        <p>Exemplo com dados sintéticos de um pet shop.</p>
+        <div class="rhythm-row">
+          <div class="rhythm-top"><span>Ração · mensal</span><span class="pill pill-warn">Atrasado 1,9x</span></div>
+          <div class="rhythm-dots" aria-hidden="true"><i class="on"></i><em></em><i class="on"></i><em></em><i class="on"></i><em></em><i class="late"></i></div>
+          <p class="rhythm-note">Última compra há 60 dias · ritmo habitual de 31 dias.</p>
+        </div>
+        <div class="rhythm-row">
+          <div class="rhythm-top"><span>Banho e tosa · 3 semanas</span><span class="pill pill-ok">Em ritmo</span></div>
+          <div class="rhythm-dots" aria-hidden="true"><i class="on"></i><em></em><i class="on"></i><em></em><i class="on"></i><em></em><i class="on"></i></div>
+          <p class="rhythm-note">Último banho há 18 dias · ritmo habitual de 21 dias.</p>
+        </div>
+        <div class="rhythm-row">
+          <div class="rhythm-top"><span>VIP · topo da base</span><span class="pill pill-warn">Contato humano</span></div>
+          <p class="rhythm-note">VIP em atraso nunca entra em automação genérica: vira tarefa pessoal do dono.</p>
+        </div>
+      </div>
     </div>
-    <img loading="lazy" decoding="async" src="assets/img/gina-joinha.webp" alt="" style="position: absolute; left: 50%; bottom: -52%; transform: translateX(-50%); height: 76%; width: auto;">
   </section>
 
-  <footer style="padding: 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: rgb(30, 107, 46);">
-    <span>Isaac Antunes · Consultoria de CRM · Atendimento remoto · Brasil e exterior</span>
-    <span>© 2026 Isaac Antunes. Personagem Gina, ilustrações e método Gina Intell: todos os direitos reservados.</span>
-    <span style="flex-basis: 100%;">Este site não coleta dados pessoais nem usa cookies. Se você entrar em contato, seus dados servem só para a resposta.</span>
-  </footer></main></div></div>
+  <section class="section" aria-labelledby="limites-title">
+    <div class="wrap">
+      <div class="no-band">
+        <h2 id="limites-title">O que a Gina não faz</h2>
+        <div class="no-grid">
+          <article class="no-card"><h3>Não dispara para a base</h3><p>Nada de mensagem em massa para quem está em dia. O foco é quem realmente pede atenção.</p></article>
+          <article class="no-card"><h3>Não inventa número</h3><p>Ritmo, recência, VIP e consentimento são calculados por regras. A explicação mostra a conta.</p></article>
+          <article class="no-card"><h3>Não contata sem opt-in</h3><p>Sem prova de consentimento, o cliente fica bloqueado — mesmo que seja VIP.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section section-tint" id="servicos" aria-labelledby="servicos-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="servicos-title">Três formas de começar.</h2>
+        <p>Você não precisa trocar de CRM. O diagnóstico mostra onde o dinheiro está sendo perdido; o piloto prova o método com a sua base.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-time">1 semana</span>
+          <h3>Diagnóstico</h3>
+          <p>Para entender onde o seu negócio está perdendo clientes.</p>
+          <ul>
+            <li>Leitura da base e do histórico de compras</li>
+            <li>Segmentação por ciclo de vida e RFV</li>
+            <li>Relatório com as prioridades dos próximos 90 dias</li>
+          </ul>
+          <span class="service-price">Sob consulta</span>
+          <a class="button button-light" href="mailto:iantunessp@gmail.com?subject=Diagn%C3%B3stico%20Gina%20para%20pet%20shop">Quero o diagnóstico</a>
+        </article>
+        <article class="service-card featured">
+          <span class="service-time">30 dias</span>
+          <h3>Piloto de retenção</h3>
+          <p>Para provar o método com a sua base, com métrica combinada antes de começar.</p>
+          <ul>
+            <li>Fila de revisão semanal</li>
+            <li>Tarefas aprovadas pelo dono</li>
+            <li>Baseline, opt-outs e receita recuperada</li>
+          </ul>
+          <span class="service-price">Sob consulta</span>
+          <a class="button button-lime" href="https://wa.me/5511991351002?text=Ol%C3%A1%2C%20quero%20entender%20o%20piloto%20de%2030%20dias%20da%20Gina.">Quero o piloto</a>
+        </article>
+        <article class="service-card">
+          <span class="service-time">Mensal</span>
+          <h3>Acompanhamento</h3>
+          <p>Para manter a régua afinada e testar novas ideias.</p>
+          <ul>
+            <li>Revisão mensal dos resultados</li>
+            <li>Novas campanhas e datas sazonais</li>
+            <li>Testes A/B de assunto, horário e canal</li>
+          </ul>
+          <span class="service-price">Sob consulta</span>
+          <a class="button button-light" href="mailto:iantunessp@gmail.com?subject=Acompanhamento%20Gina">Quero acompanhar</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" aria-labelledby="prova-title">
+    <div class="wrap evidence">
+      <div>
+        <h2 id="prova-title">Método testado,<br>não caixa-preta.</h2>
+        <p class="lede" style="margin-top:16px">A mesma lógica roda no laboratório de engenharia e no CRM. Regras auditáveis, testes adversariais e uma regra acima de todas: consentimento antes de qualquer contato.</p>
+        <p class="lede" style="margin-top:14px"><a href="https://github.com/Isaac-Antunes/gina-training-lab" style="font-weight:700;color:var(--green-700)">Ver o laboratório de avaliação</a></p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>29</strong><span>perfis de paridade entre TypeScript e Apex</span></div>
+        <div class="stat"><strong>47</strong><span>casos de avaliação offline, incluindo injeção de prompt</span></div>
+        <div class="stat"><strong>0</strong><span>mensagens automáticas ao cliente em qualquer cenário</span></div>
+      </div>
+    </div>
+  </section>
 
-</body></html>
+  <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div>
+        <h2 id="faq-title">Perguntas antes de começar.</h2>
+        <p class="lede" style="margin-top:16px">Se a sua dúvida não estiver aqui, me chama no WhatsApp. Respondo pessoalmente.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Preciso trocar de CRM?</summary>
+          <p>Não. O método roda dentro do CRM que você já usa — Salesforce, HubSpot ou uma planilha. A Gina se adapta ao que existe, não o contrário.</p>
+        </details>
+        <details>
+          <summary>Serve para pet shop pequeno?</summary>
+          <p>Serve. Quanto mais recorrente o negócio, mais sentido faz. Pet shop, clínica, salão, academia e loja de suplementos são bons exemplos.</p>
+        </details>
+        <details>
+          <summary>As mensagens saem sozinhas?</summary>
+          <p>Não. Cada envio passa pela sua aprovação. A Gina prepara a tarefa e explica o motivo; quem conversa com o cliente é você.</p>
+        </details>
+        <details>
+          <summary>E se eu não tiver consentimento registrado?</summary>
+          <p>A Gina bloqueia o contato e mostra o que falta. No diagnóstico, organizamos a prova de consentimento (data e texto aceito) antes de qualquer campanha.</p>
+        </details>
+        <details>
+          <summary>Quanto custa?</summary>
+          <p>Depende do tamanho da base e do escopo. Depois do diagnóstico, você recebe uma proposta com valor fechado. Sem letra miúda.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="final-cta">
+        <div>
+          <h2 id="cta-title">Vamos trazer seus clientes de volta?</h2>
+          <p>Me conta em poucas linhas como é o seu pet shop. Eu respondo com os próximos passos — e com uma pergunta que quase ninguém faz: qual é o ritmo dos seus clientes?</p>
+          <div class="final-actions">
+            <a class="button button-primary" href="https://wa.me/5511991351002?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20a%20Gina%20para%20o%20meu%20pet%20shop.">Falar no WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button button-light" href="mailto:iantunessp@gmail.com">Enviar e-mail</a>
+          </div>
+        </div>
+        <img class="final-mascot" src="assets/img/gina-joinha.webp" alt="Gina, mascote da consultoria, fazendo joinha" width="260" height="290">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <span>Isaac Antunes · Consultoria de CRM · Atendimento remoto · Brasil e exterior</span>
+      <div class="footer-links">
+        <a href="en/">English</a>
+        <a href="case/">Case de marca</a>
+        <a href="https://www.behance.net/gallery/256578105/Lifecycle-CRM-told-by-Gina" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/isaacnandes/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 Isaac Antunes. Personagem Gina, ilustrações e método Gina Intell: todos os direitos reservados. Este site não coleta dados pessoais nem usa cookies. Se você entrar em contato, seus dados servem só para a resposta.</p>
+  </div>
+</footer>
+</body>
+</html>
