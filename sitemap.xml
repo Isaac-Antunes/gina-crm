@@ -10,4 +10,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://isaacantunesfacha-dev.github.io/gina-crm/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://isaacantunesfacha-dev.github.io/gina-crm/en/"/>
   </url>
+  <url>
+    <loc>https://isaacantunesfacha-dev.github.io/gina-crm/petshop/</loc>
+  </url>
 </urlset>

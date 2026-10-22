@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gina para pet shops · São Paulo</title>
+<meta name="description" content="Para pet shops e banho e tosa em São Paulo: a Gina olha o histórico de compras e avisa, toda semana no WhatsApp, quais clientes passaram do tempo de voltar. Você decide quem chamar.">
+<link rel="canonical" href="https://isaacantunesfacha-dev.github.io/gina-crm/petshop/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gina">
+<meta property="og:title" content="Gina para pet shops · São Paulo">
+<meta property="og:description" content="Saiba toda semana quais clientes do banho, da tosa e da ração passaram do tempo de voltar.">
+<meta property="og:url" content="https://isaacantunesfacha-dev.github.io/gina-crm/petshop/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://isaacantunesfacha-dev.github.io/gina-crm/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Isaac Antunes">
+<link rel="icon" href="../assets/img/gina-rosto.webp">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Onest:wght@400;500;600;700;800&display=swap">
+<style>
+  :root {
+    --forest: #061F16;
+    --green: #1E6B2E;
+    --lime: #7FC453;
+    --lime-soft: #9FDC6E;
+    --mint: #EEF6E6;
+    --cream: #F5F3ED;
+    --white: #FFFFFF;
+    --ink-soft: #3E5247;
+    --wa: #1E6B2E;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--cream); color: var(--forest); font: 400 17px/1.55 Onest, system-ui, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+  main { max-width: 1180px; margin-inline: auto; padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+  .display { font-family: "Bagel Fat One", system-ui, sans-serif; font-weight: 400; line-height: .95; letter-spacing: -.01em; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 24px; border-radius: 99px; font-weight: 700; font-size: 16px; transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible, nav a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+  .btn-primary { background: var(--lime); color: var(--forest); }
+  .btn-ghost { box-shadow: inset 0 0 0 1.5px currentColor; }
+  .btn-dark { background: var(--green); color: var(--cream); }
+
+  nav { padding: 10px 10px 10px 18px; border-radius: 24px; background: var(--white); box-shadow: 0 10px 30px -20px rgba(6,31,22,.4); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  nav .brand { display: flex; align-items: center; gap: 8px; }
+  nav .brand span { font-family: "Bagel Fat One", system-ui; font-size: 22px; line-height: 1; color: var(--green); }
+  nav .links { display: flex; align-items: center; gap: 4px; }
+  nav .links a.plain { padding: 10px 12px; font-size: 15px; font-weight: 600; }
+  nav .links .btn { padding: 11px 16px; font-size: 14px; }
+
+  .hero { border-radius: 24px; overflow: hidden; color: var(--cream); background: radial-gradient(55% 75% at 80% 95%, var(--lime-soft) 0%, var(--lime) 30%, var(--green) 62%, var(--forest) 100%); display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 24px; padding: clamp(36px, 6vw, 80px) clamp(22px, 5vw, 64px) 0; }
+  .hero-copy { padding-bottom: clamp(36px, 6vw, 80px); }
+  .hero h1 { font-size: clamp(42px, 6.2vw, 84px); margin: 14px 0 20px; text-wrap: balance; }
+  .hero p.lead { font-size: clamp(18px, 1.6vw, 21px); max-width: 34ch; margin: 0 0 28px; color: rgba(245,243,237,.92); }
+  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero img { width: min(100%, 380px); justify-self: center; margin-bottom: -6px; }
+
+  section.band { border-radius: 24px; padding: clamp(40px, 5vw, 72px) clamp(22px, 4vw, 56px); }
+  .band h2 { font-size: clamp(32px, 4vw, 54px); margin: 10px 0 14px; color: var(--green); text-wrap: balance; }
+  .band p.sub { max-width: 52ch; margin: 0 0 32px; color: var(--ink-soft); }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: step; }
+  .step { background: var(--white); border-radius: 20px; padding: 26px 24px; box-shadow: inset 0 0 0 1px rgba(6,31,22,.08); }
+  .step::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--lime); color: var(--forest); font: 400 20px/1 "Bagel Fat One", system-ui; margin-bottom: 14px; }
+  .step h3 { margin: 0 0 8px; font-size: 20px; }
+  .step p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+  .example { background: var(--forest); color: var(--cream); display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .example h2 { color: var(--lime); }
+  .example p.sub { color: rgba(245,243,237,.82); }
+  .example ul { margin: 0; padding-left: 20px; color: rgba(245,243,237,.9); }
+  .example li { margin: 8px 0; }
+  .phone { background: #0F2B20; border-radius: 28px; padding: 18px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.06); }
+  .chat-head { display: flex; align-items: center; gap: 10px; padding: 4px 6px 14px; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 14px; font-weight: 700; }
+  .chat-head img { width: 34px; border-radius: 50%; background: var(--mint); padding: 3px; }
+  .chat-head small { display: block; font-weight: 400; opacity: .65; font-size: 12px; }
+  .bubble { background: var(--mint); color: var(--forest); border-radius: 4px 18px 18px 18px; padding: 16px 18px; font-size: 15px; line-height: 1.5; }
+  .bubble p { margin: 0 0 10px; }
+  .bubble p:last-child { margin-bottom: 0; }
+  .bubble .muted { color: var(--ink-soft); font-size: 14px; }
+  .bubble ol { margin: 0 0 12px; padding-left: 20px; }
+  .bubble ol li { margin-bottom: 8px; }
+  .bubble ul { margin: 0 0 12px; padding-left: 18px; color: var(--forest); }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; background: #FFE2D6; color: #8A2D0A; margin-left: 4px; }
+  .fine { font-size: 13px; opacity: .65; margin-top: 12px; }
+
+  .promise { background: var(--white); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { border-radius: 20px; padding: 24px; background: var(--mint); }
+  .card h3 { margin: 0 0 8px; font-size: 19px; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+  .faq { background: var(--mint); }
+  details { background: var(--white); border-radius: 16px; padding: 18px 22px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 700; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--green); }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 10px 0 0; color: var(--ink-soft); }
+
+  .final { text-align: center; color: var(--cream); background: radial-gradient(60% 80% at 50% 110%, var(--lime-soft), var(--green) 75%); display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .final h2 { color: var(--cream); max-width: 18ch; }
+  .final p { max-width: 44ch; margin: 0; }
+  footer { text-align: center; font-size: 14px; color: var(--ink-soft); padding: 16px 0 28px; }
+  footer a { text-decoration: underline; }
+
+  @media (max-width: 860px) {
+    .hero, .example { grid-template-columns: 1fr; }
+    .hero img { width: min(70%, 280px); }
+    .steps, .grid3 { grid-template-columns: 1fr; }
+    nav .links a.plain { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+
+  <nav aria-label="Principal">
+    <a class="brand" href="../"><img src="../assets/img/gina-rosto.webp" alt="" width="28" height="27"><span>Gina</span></a>
+    <div class="links">
+      <a class="plain" href="#como">Como funciona</a>
+      <a class="plain" href="#exemplo">Exemplo</a>
+      <a class="plain" href="#perguntas">Perguntas</a>
+      <a class="btn btn-dark" href="https://wa.me/5511991351002?text=Oi%2C%20Isaac%21%20Tenho%20um%20pet%20shop%20e%20quero%20entender%20como%20a%20Gina%20funciona." target="_blank" rel="noopener">Conversar</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Pet shops e banho e tosa · São Paulo</span>
+      <h1 class="display">O cliente do banho sumiu. Você percebeu?</h1>
+      <p class="lead">Toda semana, a Gina olha o histórico do seu pet shop e avisa no WhatsApp quem passou do tempo de voltar. Você decide quem chamar.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://wa.me/5511991351002?text=Oi%2C%20Isaac%21%20Tenho%20um%20pet%20shop%20e%20quero%20ver%20a%20Gina%20com%20os%20meus%20clientes." target="_blank" rel="noopener">Quero ver no meu pet shop</a>
+        <a class="btn btn-ghost" href="#exemplo">Ver um exemplo</a>
+      </div>
+    </div>
+    <img src="../assets/img/gina-acena.webp" alt="Gina, a personagem verde, acenando" width="1073" height="1198">
+  </header>
+
+  <section class="band" id="como" aria-labelledby="como-titulo">
+    <span class="eyebrow" style="color: var(--green);">Como funciona</span>
+    <h2 class="display" id="como-titulo">Sem sistema novo. Sem complicação.</h2>
+    <p class="sub">Cada cliente tem o seu ritmo: um volta para a ração a cada 30 dias, outro traz o cachorro para o banho a cada 15. A Gina aprende esse ritmo com as compras que você já registra.</p>
+    <div class="steps">
+      <article class="step">
+        <h3>Você manda as vendas</h3>
+        <p>Uma planilha ou a exportação do sistema que você já usa, com cliente, data e valor. Nada de trocar de sistema.</p>
+      </article>
+      <article class="step">
+        <h3>A Gina calcula o ritmo</h3>
+        <p>Para cada cliente: de quanto em quanto tempo costuma voltar e há quanto tempo não aparece. São contas, não palpite.</p>
+      </article>
+      <article class="step">
+        <h3>Você recebe a lista da semana</h3>
+        <p>No WhatsApp, em linguagem simples: quem precisa de atenção, por quê, e quem não pode ser contatado.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band example" id="exemplo" aria-labelledby="exemplo-titulo">
+    <div>
+      <span class="eyebrow" style="color: var(--lime);">Exemplo</span>
+      <h2 class="display" id="exemplo-titulo">É isso que chega no seu WhatsApp.</h2>
+      <p class="sub">Uma mensagem curta, para ler entre um banho e outro.</p>
+      <ul>
+        <li>Primeiro quem é VIP e está atrasado.</li>
+        <li>O motivo em uma frase, com os dias.</li>
+        <li>Quem não autorizou contato fica separado.</li>
+      </ul>
+    </div>
+    <div class="phone" role="figure" aria-label="Exemplo de mensagem semanal da Gina no WhatsApp">
+      <div class="chat-head"><img src="../assets/img/gina-rosto.webp" alt="" width="34" height="33"><div>Gina<small>relatório da semana</small></div></div>
+      <div class="bubble">
+        <p><strong>Gina — quem precisa de atenção</strong><br><span class="muted">9 clientes avaliados · 4 pedem ação</span></p>
+        <ol>
+          <li><strong>Roberto Alves</strong> — cliente VIP atrasado <span class="tag">prioridade alta</span><br><span class="muted">Costuma voltar a cada 31 dias; última compra há 60. Sugestão: contato pessoal.</span></li>
+          <li><strong>Ana Lima</strong> — atrasada para voltar<br><span class="muted">Costuma voltar a cada 15 dias; última compra há 29. Sugestão: lembrete amigável.</span></li>
+          <li><strong>Julia Rocha</strong> — cliente nova<br><span class="muted">Primeira compra há 21 dias. Sugestão: boas-vindas.</span></li>
+        </ol>
+        <p><strong>Não contatar (sem autorização):</strong></p>
+        <ul>
+          <li>Carlos Nunes — pediu para não ser contatado</li>
+        </ul>
+        <p class="muted"><em>A Gina não envia mensagens. Você revisa e decide.</em></p>
+      </div>
+      <p class="fine">Clientes e números fictícios, gerados pelo modo planilha da Gina.</p>
+    </div>
+  </section>
+
+  <section class="band promise" aria-labelledby="promessa-titulo">
+    <span class="eyebrow" style="color: var(--green);">O que a Gina não faz</span>
+    <h2 class="display" id="promessa-titulo">Quem fala com o cliente é você.</h2>
+    <div class="grid3">
+      <article class="card">
+        <h3>Não manda mensagem sozinha</h3>
+        <p>A Gina só avisa e sugere. O contato com o tutor é sempre seu, do seu jeito.</p>
+      </article>
+      <article class="card">
+        <h3>Respeita quem não autorizou</h3>
+        <p>Sem autorização de contato, o cliente fica fora da lista. É o que pede a LGPD, e é o que mantém a confiança.</p>
+      </article>
+      <article class="card">
+        <h3>Não inventa motivo</h3>
+        <p>Cada aviso mostra os dias e o ritmo que levaram a ele. Se os dados não bastam, ela diz isso.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band faq" id="perguntas" aria-labelledby="faq-titulo">
+    <h2 class="display" id="faq-titulo">Perguntas frequentes</h2>
+    <details>
+      <summary>Preciso ter um sistema de CRM?</summary>
+      <p>Não. Uma planilha com cliente, data e valor de cada compra já basta. Se você usa um sistema de pet shop, a exportação dele também serve.</p>
+    </details>
+    <details>
+      <summary>Serve para banho e tosa, ração e clínica?</summary>
+      <p>Sim. Cada serviço tem um ritmo diferente, e a Gina calcula o ritmo de cada cliente a partir do que ele de fato compra.</p>
+    </details>
+    <details>
+      <summary>Vocês atendem presencialmente?</summary>
+      <p>O atendimento é em São Paulo, presencial ou remoto, como for melhor para a sua rotina.</p>
+    </details>
+    <details>
+      <summary>Quanto custa?</summary>
+      <p>Depende do tamanho da sua base de clientes. Conversamos pelo WhatsApp e você recebe uma proposta com valor fechado.</p>
+    </details>
+  </section>
+
+  <section class="band final" aria-labelledby="final-titulo">
+    <h2 class="display" id="final-titulo">Vamos ver quem está sumindo do seu pet shop?</h2>
+    <p>Mande uma mensagem contando o tamanho da sua loja. Isaac responde com os próximos passos.</p>
+    <a class="btn btn-primary" href="https://wa.me/5511991351002?text=Oi%2C%20Isaac%21%20Tenho%20um%20pet%20shop%20e%20quero%20ver%20a%20Gina%20com%20os%20meus%20clientes." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </section>
+
+  <footer>
+    <a href="../">Conheça a consultoria completa</a> · © 2026 Isaac Antunes. Personagem Gina © Isaac Antunes.
+  </footer>
+
+</main>
+</body>
+</html>
